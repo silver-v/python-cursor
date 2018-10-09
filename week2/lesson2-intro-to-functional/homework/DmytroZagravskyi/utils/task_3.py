@@ -1,2 +1,2 @@
 def makeLoad(a: int) -> float:
-    return a/200*100
+    return format(a/200*100, '.2f')

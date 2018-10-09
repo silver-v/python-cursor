@@ -17,7 +17,8 @@ if __name__ == "__main__":
         {'age': 55, 'name': 'Frank'},
         {'age': 83, 'name': 'Homer'},
         {'age': 25, 'name': 'Tom'},
-        {'age': 150, 'name': 'Odin'}
+        {'age': 150, 'name': 'Odin'},
+        {'age': 250, 'name': 'Vampire'}
     ]
 
     print('\ntask 1 - initial data')
@@ -30,7 +31,9 @@ if __name__ == "__main__":
 
     #task3
     print('\ntask 3 - load%')
-    for dic in members: dic['load'] = makeLoad(dic['age'])
+    for dic in members: dic['load'] = str(makeLoad(dic['age']))
+    members = list(filter(lambda d: float(d['load']) < 100, members))
+
     print(members)
 
     #task4
